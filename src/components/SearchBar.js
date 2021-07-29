@@ -10,7 +10,7 @@ const SearchBar = ({handleSearch}) => {
 
     return (
         <div>
-            <form className="search-form" onChange={(e)=>handleSearch(e,searchInfo)}>
+            <form className="search-form" onChange={(e)=>handleSearch(e,searchInfo)} onSubmit={(e)=>handleSearch(e,searchInfo)}>
                 <label htmlFor="searchInput"></label>
                 <input type="text" value={searchInfo} onChange={handleChange} id='searchInput'/>
                 <button type="submit">Chercher</button>
